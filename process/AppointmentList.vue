@@ -3,7 +3,12 @@
   <ul class="appointment-list"
     v-for="(item, i) in appointments"
     :key="item.id">
-    <li >{{item.petName}}</li>
+    <li >
+      <div>{{item.petName}}</div>
+      <div>{{item.petOwner}}</div>
+      <div>{{item.aptDate}}</div>
+      <div>{{item.aptNotes}}</div>
+    </li>
   </ul><!-- appointment-list --> 
   </div>
 </template>
