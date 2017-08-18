@@ -43,7 +43,7 @@ export default {
 
   created: function() {
 
-    $.getJSON('./builds/data.json')
+    $.getJSON('./builds/appointments.json')
       .done(info => { 
         this.theAppointments = info;
     }); //getJSON
