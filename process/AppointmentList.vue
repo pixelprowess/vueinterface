@@ -1,28 +1,29 @@
 <template>
-  <div>
-    <ul class="appointment-list"
+  <ul class="appointment-list">
+    <appointment-item
       v-for="(item, i) in appointments"
-      :key="i">
-      <li>
-        <div>{{item.petName}}</div>
-        <div>{{item.petOwner}}</div>
-        <div>{{item.aptDate}}</div>
-        <div>{{item.aptNotes}}</div>
-      </li>
-    </ul>
-  </div>
+      :appointment="item"
+      :key="i"
+    />
+  </ul><!-- appointment-list --> 
 </template>
 
 <script>
+import AppointmentListItem from './AppointmentListItem.vue';
+
 export default {
-  name: 'AppointmentList',
-  props: ['appointments']
-}
+  name: 'AppointmentsList',
+
+  props: ['appointments'],
+  
+  components: {
+      'appointment-item': AppointmentListItem
+  }, //components 
+} //export
 </script>
 
-
-
 <style scoped>
+
   .appointment-list {
     margin: 0;
     padding: 0;
@@ -30,4 +31,5 @@ export default {
     margin: 10px 5%;
     font-size: 1.7rem;
   }
+
 </style>
