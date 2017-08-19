@@ -10,9 +10,7 @@
 
       <div class="pet-head">
         <span class="pet-name">{{appointment.petName}}</span>
-        <span class="apt-date pull-right">{{
-          this.formattedDate
-          }}</span>
+        <span class="apt-date pull-right">{{ this.formattedDate }}</span>
       </div><!-- pet-head -->
 
       <div class="owner-name">
@@ -25,7 +23,6 @@
 
   </li><!-- pet-item -->
 
-
 </template>
 
 <script>
@@ -36,15 +33,13 @@ export default {
   name: 'PetAppointmentItem',
   props: ['appointment'],
   computed: {
-
     formattedDate: function() {
-      //return this.appointment.aptDate;
       return moment(new Date(this.appointment.aptDate)).format('MM-DD-YY, h:mm a');
     } //date
 
-  } //computed
-  
+  } //computed  
 }
+
 </script>
 
 <style scoped>
