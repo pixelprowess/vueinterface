@@ -24,14 +24,12 @@ export default {
 } //export
 </script>
 
-
-
 <style scoped>
-  .appointment-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin: 10px 5%;
-    font-size: 1.7rem;
-  }
+.appointment-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 5%;
+  font-size: 1rem;
+}
 </style>
